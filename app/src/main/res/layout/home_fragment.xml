@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/_40sdp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_15sdp"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:background="@drawable/back_drawable">
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTextLayoutSearch"
+                style="@style/text_input_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:hint="Search..."
+                app:endIconDrawable="@drawable/filter"
+                app:endIconTint="@color/colorPrimary"
+                app:endIconMode="custom"
+                android:focusable="false"
+                android:padding="@dimen/_2sdp"
+                app:startIconDrawable="@drawable/ic_search">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:cursorVisible="false"
+                    android:padding="@dimen/_10sdp"
+                    android:focusable="false"
+                    android:focusedByDefault="false"
+                    android:id="@+id/inputEditTextSearch"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:src="@drawable/logo"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white" />
+
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewpagerImageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:elevation="@dimen/_5sdp"
+                android:layout_marginVertical="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_50sdp" />
+
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BigTitles"
+            android:text="Popular "
+            android:labelFor="@+id/recyclerViewPopular"
+            android:layout_margin="@dimen/_4sdp"
+            app:drawableEndCompat="@drawable/ic_trending"
+            android:drawableTint="@color/colorPrimary"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:shimmer_duration="800"
+            app:shimmer_auto_start="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+                <include layout="@layout/popular_product_list_item_placeholder" />
+
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPopular"
+            style="@style/recyclerViewFragmentMainStyle"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/popular_product_list_item" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/BigTitles"
+            android:text="Recommended for you "
+            android:labelFor="@+id/recyclerViewPopular"
+            android:layout_margin="@dimen/_4sdp"
+            android:textSize="@dimen/_18ssp"
+            android:drawableTint="@color/colorPrimary"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerRecommended"
+            style="@style/recyclerViewFragmentMainStyle"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:visibility="visible"
+            android:padding="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/popular_product_list_item" />
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

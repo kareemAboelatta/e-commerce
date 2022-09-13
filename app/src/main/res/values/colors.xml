@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="orange_500">#FB9412</color>
+    <color name="orange_700">#E1582E</color>
+    <color name="orange_200">#FFB300</color>
+    <color name="teal_700">#EE8B0D</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="colorPrimaryDark">#E3830A</color>
+    <color name="colorPrimaryLight">#F1AB53</color>
+    <color name="colorPrimary">#FB9412</color>
+    <color name="colorPrimaryLight2">#F44336</color>
+    <color name="active_point_color">#B16B04</color>
+
+    <color name="gray">#A6A6A8</color>
+    <color name="light_gray">#D8D8DE</color>
+    <color name="Black">#0E122B</color>
+    <color name="colorAccent">#EDEDF1</color>
+    <color name="Redgrade1">#F4AEC6</color>
+    <color name="Redgrade2">#EA0C7B</color>
+    <color name="redLight">#FABFC4</color>
+    <color name="dialogBackground">#4E4848</color>
+    <color name="Red">#F40505</color>
+    <color name="background">#B5F0F4</color>
+    <color name="green">#20CD27</color>
+
+    //
+
+    <color name="rate_active_color">#FFFEBA39</color>
+    <color name="rate_normal_color">#FFA5A5A5</color>
+    <color name="rate_button_color">#006cbc</color>
+
+    // order tracking
+
+
+</resources>

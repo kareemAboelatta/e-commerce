@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.e_commerce.main.presentation.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_fragmentProductDetails"
+            app:destination="@id/fragmentProductDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentProductDetails"
+        android:name="com.example.e_commerce.main.presentation.fragment.FragmentProductDetails"
+        android:label="FragmentProductDetails" >
+        <argument
+            android:name="product"
+            app:argType="com.example.e_commerce.main.domain.models.SummaryProduct" />
+    </fragment>
+</navigation>
